@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QR Site</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #141E30, #243B55);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+}
+
+#intro {
+    position: absolute;
+    font-size: 28px;
+    padding: 20px;
+    animation: fadeOut 3s forwards;
+    animation-delay: 2s;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+#mainContent {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.qr-box {
+    background: white;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+}
+
+.qr-box img {
+    width: 250px;
+    max-width: 80vw;
+}
+
+p {
+    margin-top: 20px;
+    font-size: 16px;
+    padding: 0 15px;
+}
+</style>
+</head>
+<body>
+
+<div id="intro">
+    Muhammed Aziz Akın Mal
+</div>
+
+<div id="mainContent">
+    <div class="qr-box">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=51829006725" alt="QR Kod">
+    </div>
+    <p>Aziz bu QR kodu okut çıkan kod benim pubg deki İD im</p>
+</div>
+
+<script>
+setTimeout(function(){
+    document.getElementById("mainContent").style.display = "flex";
+}, 5000);
+</script>
+
+</body>
+</html>
